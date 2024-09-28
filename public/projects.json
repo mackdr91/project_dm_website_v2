@@ -1,0 +1,72 @@
+[
+    {
+      "id": 1,
+      "title": "Portfolio Website",
+      "description": "A personal portfolio website to showcase projects, skills, and experience.",
+      "technologies": ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
+      "link": "https://example.com/portfolio"
+    },
+    {
+      "id": 2,
+      "title": "E-Commerce Platform",
+      "description": "A fully functional e-commerce platform with product management, shopping cart, and payment gateway integration.",
+      "technologies": ["Next.js", "Node.js", "MongoDB", "Stripe API", "Tailwind CSS"],
+      "link": "https://example.com/ecommerce"
+    },
+    {
+      "id": 3,
+      "title": "Task Manager App",
+      "description": "A task management application that allows users to create, update, and delete tasks with real-time notifications.",
+      "technologies": ["React", "Firebase", "Material UI"],
+      "link": "https://example.com/task-manager"
+    },
+    {
+      "id": 4,
+      "title": "Social Media Dashboard",
+      "description": "A dashboard that connects to multiple social media platforms to track followers, likes, and engagement metrics.",
+      "technologies": ["Vue.js", "Node.js", "Express", "MongoDB"],
+      "link": "https://example.com/social-media-dashboard"
+    },
+    {
+      "id": 5,
+      "title": "Blog Platform",
+      "description": "A full-stack blog platform that allows users to create, edit, and publish blog posts with user authentication.",
+      "technologies": ["Django", "Python", "PostgreSQL", "Bootstrap"],
+      "link": "https://example.com/blog-platform"
+    },
+    {
+      "id": 6,
+      "title": "Restaurant Reservation System",
+      "description": "A web app for managing restaurant reservations with real-time seat availability and customer notifications.",
+      "technologies": ["Angular", "Node.js", "MySQL", "Socket.io"],
+      "link": "https://example.com/restaurant-reservation"
+    },
+    {
+      "id": 7,
+      "title": "Weather Dashboard",
+      "description": "A weather dashboard that pulls data from a weather API to display current conditions and forecasts for different cities.",
+      "technologies": ["React", "OpenWeatherMap API", "CSS"],
+      "link": "https://example.com/weather-dashboard"
+    },
+    {
+      "id": 8,
+      "title": "Online Learning Platform",
+      "description": "A platform for hosting online courses with features for course enrollment, progress tracking, and video lectures.",
+      "technologies": ["Next.js", "Firebase", "Tailwind CSS", "Vimeo API"],
+      "link": "https://example.com/online-learning"
+    },
+    {
+      "id": 9,
+      "title": "Real Estate Listings",
+      "description": "A real estate website for displaying property listings with search filters and map integration.",
+      "technologies": ["Gatsby.js", "GraphQL", "Mapbox", "Styled Components"],
+      "link": "https://example.com/real-estate"
+    },
+    {
+      "id": 10,
+      "title": "Job Board Platform",
+      "description": "A platform where users can search for jobs, apply for positions, and companies can post job listings.",
+      "technologies": ["Ruby on Rails", "PostgreSQL", "Bootstrap"],
+      "link": "https://example.com/job-board"
+    }
+  ]
