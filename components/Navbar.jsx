@@ -1,15 +1,18 @@
 "use client";
 import { useState } from "react";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
   const { data: session } = useSession();
   return (
 
       <nav className="sticky bg-white top-0 z-50 flex justify-between items-center p-6">
         {/* Logo */}
         <h1 className="text-xl mr-6 font-bold sm:text-xl sm:text-center">
-          <a href="/">Domonick Mack</a>
+         <Link href="/">Domonick Mack</Link>
         </h1>
 
         {/* Hamburger Icon (Visible on Mobile) */}
@@ -40,40 +43,85 @@ const Navbar = () => {
                   strokeWidth={2}
                   d="M4 6h16M4 12h16m-7 6h7"
                 />
+
               )}
+
             </svg>
           </button>
         </div>
 
         {/* Navigation Links (Hidden on mobile, visible on larger screens) */}
-        <ul className="hidden md:flex space-x-4">
+        <ul className="hidden md:flex space-x-4 items-center">
           <li>
-            <a href="/" className="hover:text-blue-500">
+           <Link href="/"
+            className={`${
+              pathname === "/"
+                ? "bg-orange-500 text-white"
+                : "text-orange-500 hover:bg-orange-700 hover:text-white"
+            } px-3 py-2 rounded-md text-sm font-medium`}
+           >
               Home
-            </a>
+           </Link>
           </li>
           <li>
-            <a href="/about" className="hover:text-blue-500">
+           <Link href="/about"
+            className={`${
+              pathname === "/about"
+                ? "bg-orange-500 text-white"
+                : "text-orange-500 hover:bg-orange-700 hover:text-white"
+            } px-3 py-2 rounded-md text-sm font-medium`}
+           >
               About
-            </a>
+           </Link>
           </li>
           <li>
-            <a href="/projects" className="hover:text-blue-500">
+           <Link href="/projects"
+           className={`${
+            pathname === "/projects"
+              ? "bg-orange-500 text-white"
+              : "text-orange-500 hover:bg-orange-700 hover:text-white"
+          } px-3 py-2 rounded-md text-sm font-medium`}
+
+           >
               Projects
-            </a>
+           </Link>
           </li>
           <li>
-            <a href="/contact" className="hover:text-blue-500">
+           <Link href="/contact"
+            className={`${
+              pathname === "/contact"
+                ? "bg-orange-500 text-white"
+                : "text-orange-500 hover:bg-orange-700 hover:text-white"
+            } px-3 py-2 rounded-md text-sm font-medium`}
+           >
               Contact
-            </a>
+           </Link>
           </li>
 
           {session && (
             <li>
-              <a href="/projects/add" className="hover:text-blue-500">
+             <Link href="/projects/add"
+            className={`${
+              pathname === "/projects/add"
+                ? "bg-orange-500 text-white"
+                : "text-orange-500 hover:bg-orange-700 hover:text-white"
+            } px-3 py-2 rounded-md text-sm font-medium`}
+             >
                 Add Project
-              </a>
+             </Link>
             </li>
+
+          )}
+          {session && (
+            <li>
+             <button
+            onClick={() => signOut({ callbackUrl: "/" })}
+            className="bg-red-500 text-white px-4 py-2 rounded"
+          >
+            Sign Out
+          </button>
+            </li>
+
           )}
         </ul>
 
@@ -81,36 +129,36 @@ const Navbar = () => {
         {menuOpen && (
           <ul className=" p-10 bottom-10 left-1/2 backdrop-blur-lg rounded-lg  md:hidden">
             <li>
-              <a
+             <Link
                 href="/"
                 className="block py-2 text-center hover:text-blue-500"
               >
                 Home
-              </a>
+             </Link>
             </li>
             <li>
-              <a
+             <Link
                 href="#about"
                 className="block py-2 text-center hover:text-blue-500"
               >
                 About
-              </a>
+             </Link>
             </li>
             <li>
-              <a
+             <Link
                 href="/projects"
                 className="block py-2 text-center hover:text-blue-500"
               >
                 Projects
-              </a>
+             </Link>
             </li>
             <li>
-              <a
+             <Link
                 href="#contact"
                 className="block  text-center hover:text-blue-500"
               >
                 Contact
-              </a>
+             </Link>
             </li>
           </ul>
         )}

@@ -26,13 +26,13 @@ const Hero = () => {
           className="rounded-full"
         />
         <div className="text-center">
-          <h1 className={`text-[10rem] ${anton.className}`}>
+          <h1 className={`text-[5rem] md:text-[10rem]  ${anton.className}`}>
             Hi, I’m Domonick Mack
           </h1>
           <p className=" px-4 text-4xl max-w-5xl mx-auto text-gray-500 leading-[50px]">
             AI | Web Developer
           </p>
-          <p className=" px-4 text-2xl max-w-7xl mx-auto text-gray-500 leading-[50px]">
+          <p className=" px-4 text-2xl max-w-7xl mx-auto text-gray-500 leading-[40px] md:leading-[50px] ">
             I work on front-end, back-end web development, AI automation and AI development
           </p>
         </div>

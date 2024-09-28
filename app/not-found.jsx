@@ -9,10 +9,11 @@ const NotFoundPage = () => {
         <div className="flex justify-center">
           <FaExclamationTriangle className="text-5xl text-red-500" />
         </div>
-        <div className="text-center">
+        <div className="text-center flex flex-col">
           <h4 className="text-2xl font-bold mt-2 mb-2">
             Sorry, there is nothing here
           </h4>
+          <Link href="/projects">Go Back to Projects</Link>
           <Link href="/">Go Back Home</Link>
         </div>
       </div>
